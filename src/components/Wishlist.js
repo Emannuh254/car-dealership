@@ -1,11 +1,31 @@
 import React from "react";
 
-const Wishlist = () => {
+const Wishlist = ({ wishlist, removeFromWishlist }) => {
   return (
-    <diV>
-      <h1>Wishlist</h1>
-      <p>Here are the cars youve saved for later</p>
-    </diV>
+    <div className="wishlist">
+      <h1>Your Wishlist</h1>
+      {wishlist.length === 0 ? (
+        <p>No cars in your wishlist.</p>
+      ) : (
+        wishlist.map((car) => (
+          <div key={car.id} className="car-card">
+            <img
+              src={`https://car-dealership-backend-2.onrender.com${car.image}`}
+              alt={car.name}
+              className="car-image"
+            />
+            <h3>{car.name}</h3>
+            <p>Model: {car.model || "Unknown"}</p>
+            <p>Year: {car.year}</p>
+            <p>Price: ${car.price}</p>
+            {/* Remove from Wishlist Button */}
+            <button onClick={() => removeFromWishlist(car.id)}>
+              Remove from Wishlist
+            </button>
+          </div>
+        ))
+      )}
+    </div>
   );
 };
 

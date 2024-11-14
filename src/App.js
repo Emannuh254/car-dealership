@@ -6,6 +6,7 @@ import Garage from "./components/Garage";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Wishlist from "./components/Wishlist";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [cars, setCars] = useState([]);
@@ -14,7 +15,6 @@ const App = () => {
     return savedWishlist ? JSON.parse(savedWishlist) : [];
   });
 
-  // Fetch cars data from the API
   useEffect(() => {
     fetch("https://car-dealership-backend-2.onrender.com/cars")
       .then((response) => response.json())
@@ -22,7 +22,6 @@ const App = () => {
       .catch((error) => console.error("Error fetching cars:", error));
   }, []);
 
-  // Add a car to the wishlist
   const addToWishlist = (car) => {
     setWishlist((prevWishlist) => {
       const updatedWishlist = [...prevWishlist, car];
@@ -31,7 +30,6 @@ const App = () => {
     });
   };
 
-  // Remove a car from the wishlist
   const removeFromWishlist = (carId) => {
     setWishlist((prevWishlist) => {
       const updatedWishlist = prevWishlist.filter((car) => car.id !== carId);
@@ -61,12 +59,13 @@ const App = () => {
             render={() => (
               <Wishlist
                 wishlist={wishlist}
-                removeFromWishlist={removeFromWishlist} // Pass remove function here
+                removeFromWishlist={removeFromWishlist}
               />
             )}
           />
         </Switch>
       </div>
+      <Footer /> {/* add footer component here */}
     </Router>
   );
 };

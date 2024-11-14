@@ -27,6 +27,7 @@ const Garage = ({ addToWishlist }) => {
   return (
     <div className="garage">
       <h1>Garage</h1>
+
       {/* Search input field */}
       <input
         type="text"
@@ -52,7 +53,7 @@ const Garage = ({ addToWishlist }) => {
               <p>Model: {car.model}</p>
               <p>Year: {car.year}</p>
               <p>Price: ${car.price}</p>
-              {/* add to Wishlist Button */}
+              {/* add to wishlist buton */}
               <button
                 onClick={() => {
                   addToWishlist(car); // add car to wishlist

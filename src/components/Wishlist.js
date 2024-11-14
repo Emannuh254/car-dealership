@@ -10,7 +10,7 @@ const Wishlist = ({ wishlist, removeFromWishlist }) => {
         wishlist.map((car) => (
           <div key={car.id} className="car-card">
             <img
-              src={`https://car-dealership-backend-2.onrender.com${car.image}`}
+              src={`https://car-dealership-backend-2.onrender.com/images/Car${car.id}.jpg`} // Using car ID to generate the image URL
               alt={car.name}
               className="car-image"
             />
@@ -18,11 +18,10 @@ const Wishlist = ({ wishlist, removeFromWishlist }) => {
             <p>Model: {car.model || "Unknown"}</p>
             <p>Year: {car.year}</p>
             <p>Price: ${car.price}</p>
-            {/* Remove from Wishlist Button */}
             <button
               onClick={() => {
                 removeFromWishlist(car.id); // Remove the car from wishlist
-                alert("Car has been removed from your wishlist!"); // Show the alert
+                alert(`${car.name} has been removed from your wishlist!`); // Alert the user
               }}
             >
               Remove from Wishlist

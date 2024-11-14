@@ -19,7 +19,12 @@ const Wishlist = ({ wishlist, removeFromWishlist }) => {
             <p>Year: {car.year}</p>
             <p>Price: ${car.price}</p>
             {/* Remove from Wishlist Button */}
-            <button onClick={() => removeFromWishlist(car.id)}>
+            <button
+              onClick={() => {
+                removeFromWishlist(car.id); // Remove the car from wishlist
+                alert("Car has been removed from your wishlist!"); // Show the alert
+              }}
+            >
               Remove from Wishlist
             </button>
           </div>

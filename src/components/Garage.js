@@ -17,7 +17,7 @@ const Garage = ({ addToWishlist }) => {
       .catch((error) => console.error("Error fetching cars:", error));
   }, []);
 
-  // filter cars on search query
+  // filter carz on search query
   const filteredCars = cars.filter((car) =>
     car.name.toLowerCase().includes(searchQuery.toLowerCase())
   );

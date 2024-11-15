@@ -1,5 +1,7 @@
 ## Khamic Car Dealership App
 
+## Emmanuel Mutugi
+
 _A sleek and user-friendly car dealership web application built with React. The app allows users to browse through a list of available cars, add their favorite cars to a wishlist, and search for specific cars by name_
 
 # Description

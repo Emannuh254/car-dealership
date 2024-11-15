@@ -501,21 +501,3 @@ body {
   border-top: 1px solid #333;
   padding-top: 15px;
 }
-/*cursor and glow effect on text in about */
-.about-title,
-.about-description,
-.about-subheading,
-.about-list li,
-.about-footer {
-  cursor: pointer;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.about-title:hover,
-.about-description:hover,
-.about-subheading:hover,
-.about-list li:hover,
-.about-footer:hover {
-  color: #9451dc;
-  text-shadow: 0 0 8px rgba(149, 78, 230, 0.8), 0 0 10px rgba(155, 89, 182, 0.8); /* Purple glow effect */
-}

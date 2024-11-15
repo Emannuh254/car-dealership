@@ -28,6 +28,7 @@ const About = () => {
         <li>Customer Satisfaction</li>
         <li>Expert Advice</li>
         <li>Competitive Prices</li>
+        <li>Faster Inquiries</li>
       </ul>
       <p className="about-footer">
         Explore our garage and drive away with your dream car today!

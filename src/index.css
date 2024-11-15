@@ -249,48 +249,7 @@ body {
 .navbar-link:active {
   transform: translateY(1px); /* show slight movement on click */
 }
-.footer {
-  position: relative;
-  border-radius: 3%;
-  left: 15%;
-  bottom: 0;
-  width: 70%;
-  height: 25px;
-  background-color: #1c1c1e;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #7a17ec; /* Border for styling */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* shadow on top edge */
-  z-index: 2;
-  font-size: 1rem;
-}
 
-.footer a {
-  color: #7a17ec;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: #9b59b6; /* slight color on hover */
-}
-
-.footer p {
-  margin: 5px 0;
-  font-size: 1rem;
-}
-
-.footer p:first-child {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.footer:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 -6px 15px rgba(122, 23, 236, 0.6); /* glow effect */
-}
 .garage {
   text-align: center;
   padding: 20px;

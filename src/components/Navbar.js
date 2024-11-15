@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; //Link component for client-side navigation
 // navbar will route components
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
+        {/*<Link> allows seamless navigation without refreshing*/}
         <li>
           <Link to="/" className="navbar-link">
+            {/* homepage  is universly understood as landing page so no need of naming it*/}
             Home
           </Link>
         </li>

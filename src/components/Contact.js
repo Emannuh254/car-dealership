@@ -53,8 +53,8 @@ const Contact = () => {
             Instagram:{" "}
             <a
               href="https://instagram.com/just_khamic"
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" // Opens the link in  new tab
+              rel="noopener noreferrer" //noopener using the tel: protocol
             >
               @just_khamic
             </a>

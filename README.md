@@ -70,9 +70,11 @@ If you'd like to run the project locally, follow these steps:
    1. Npm install on your terminal
    2. Start the development server using
 
-   npm run start 3. Open your browser and visit:
+   ## [npm run start]
 
-   http://localhost:3000
+   3. Open your browser and visit:
+
+   (http://localhost:3000)
 
    ## Technologies Used
 

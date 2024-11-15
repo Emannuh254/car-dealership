@@ -1,30 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from "react"; //hook to run fetch data after rendering t manage components
+import { useHistory } from "react-router-dom"; //react hook to navigate between routes in single page app
 
 const baseUrl = "https://car-dealership-backend-2.onrender.com";
 
 const Home = () => {
-  const [todaysPick, setTodaysPick] = useState(null);
+  const [todaysPick, setTodaysPick] = useState(null); // Hld currnt car details fetchd fr backend and functn  to upd value
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`${baseUrl}/cars`)
-      .then((response) => response.json())
+    //fetch data when componet renderd  first time
+    fetch(`${baseUrl}/cars`) //http  get request
+      .then((response) => response.json()) //convet data to json
       .then((data) => {
         const rangeRover = data.find((car) => car.name === "Range Rover");
-
+        //find and return the first item in array with same value
         if (rangeRover) {
-          setTodaysPick(rangeRover);
+          setTodaysPick(rangeRover); //If found update todaysPick state with the details of Range.
         } else {
           console.log("Range Rover not found in the data.");
         }
       })
       .catch((error) => console.error("Error fetching cars:", error));
-  }, []);
+  }, []); //catch any error during processing
 
   const handleViewCar = () => {
-    history.push("/garage");
-  };
+    history.push("/garage"); //add new entry to browser history stack that simulates a link click and updates the url to /garage.
+  }; //from useHistory hook
 
   return (
     <div className="home">
@@ -33,6 +34,7 @@ const Home = () => {
           <h1>
             <strong>
               Welcome to <br></br>KHAMIC'S <br></br> Dealerships{" "}
+              {/*addspace between words (jsx syntax)*/}
             </strong>
           </h1>
           <p>
@@ -48,13 +50,13 @@ const Home = () => {
         <div className="diagonal-line"></div>
       </div>
 
-      {todaysPick && (
+      {todaysPick && ( // check if todaysPick is true(nothin llbe rendered if null)
         <div className="todays-pick">
           <h2>Today's Pick</h2>
           <div className="car-card">
             <img
-              src={`${baseUrl}/images/Car${todaysPick.id}.jpg`}
-              alt={todaysPick.name}
+              src={`${baseUrl}/images/Car${todaysPick.id}.jpg`} // dynamically load car image by using todaysPick.id to create the image URL
+              alt={todaysPick.name} //construct url for the image using car id
               className="car-image"
             />
             <h3>{todaysPick.name}</h3>

@@ -55,47 +55,43 @@ If you'd like to run the project locally, follow these steps:
 
 - Node.js installed on your computer
 - A code editor (VS Code recommended)
-  Basic understanding of React
-  Installation Process
-  Clone the repository:
-  bash
-  Copy code
-  git clone https://github.com/your-username/khamic-car-dealership.git
-  Navigate to the project directory:
-  bash
-  Copy code
-  cd khamic-car-dealership
-  Install dependencies:
-  bash
-  Copy code
-  npm install
-  Start the development server:
-  bash
-  Copy code
-  npm run start
-  Open your browser and visit:
-  arduino
-  Copy code
-  http://localhost:3000
-  Technologies Used
-  React JS: Component-based user interface development
-  CSS3: Styling and animations
-  JavaScript (ES6): Dynamic rendering and interactivity
-  React Router: Navigation between pages
-  Netlify: Deployment and hosting
-  Related Repositories
-  If this app interacts with a backend or APIs, include their details here (if applicable):
+  -Basic understanding of React
 
-Backend API: Khamic API Repository
+### Installation Process
+
+1. Fork the repository.
+2. Clone the repository.
+   git clone [Repo](git@github.com:Emannuh254/car-dealership.git)
+
+   - cd khamic-car-dealership
+
+   ## Install dependencies
+
+   1. Npm install on your terminal
+   2. Start the development server using
+
+   npm run start 3. Open your browser and visit:
+
+   http://localhost:3000
+
+   ## Technologies Used
+
+   -React JS: Component-based user interface development
+   -CSS3: Styling and animations
+   -JavaScript (ES6): Dynamic rendering and interactivity
+   -React Router: Navigation between pages
+   -Netlify: Deployment and hosting
+
+   ## Related Repositories
+
+Backend API: (https://car-dealership-backend-2.onrender.com)
 Deployed API: Live API URL
-Support and Contact Details
+
+## Support and Contact Details
+
 If you have any questions, suggestions, or need assistance, feel free to contact:
 
 Email: smontana@gmail.com
-WhatsApp/Phone: +254746100508
-Instagram: @just_khamic
-TikTok: khamic
+
 License
 This project is licensed under the MIT License.
-
-This README uses Markdown headers, lists, links, and code block formatting for better readability and clarity in Markdown editors and GitHub. Let me know if you need further customization!

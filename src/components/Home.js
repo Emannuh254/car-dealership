@@ -68,7 +68,7 @@ const Home = () => {
 
       {/* features part */}
       <div className="features-section">
-        <h2>Take a journey, bend space</h2>
+        <h2>Take a journey, beyond space</h2>
         <p>
           The Range Rover can't help but steal the spotlight. With its sharp,
           angular lines and exotic, glass-covered engine, it has a wide and
